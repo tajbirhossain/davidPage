@@ -20,6 +20,8 @@ overlay.addEventListener("click", () => {
 const popupFormWrap = document.querySelector(".popupFormWrap")
 const popupOverlay = document.querySelector(".popupOverlay")
 const pricingBuyBtn = document.querySelectorAll(".pricingMainCard button")
+const networkRowLeft = document.querySelectorAll(".networkRowLeft")
+const networkRowRight = document.querySelectorAll(".networkRowRight")
 
 
 pricingBuyBtn.forEach(item => {
@@ -28,6 +30,21 @@ pricingBuyBtn.forEach(item => {
     })
 })
 
+
+networkRowLeft.forEach(item => {
+    item.addEventListener("click", () => {
+        popupFormWrap.classList.add("active")
+    })
+})
+networkRowRight.forEach(item => {
+    item.addEventListener("click", () => {
+        popupFormWrap.classList.add("active")
+    })
+})
+
+
 popupOverlay.addEventListener("click", () => {
     popupFormWrap.classList.remove("active")
 })
+
+
