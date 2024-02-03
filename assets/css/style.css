@@ -410,6 +410,115 @@ footer {
 
 
 
+.popupFormWrap {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    overflow-x: clip;
+    overflow-y: auto;
+}
+.popupFormWrap.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.popupOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.popupFormContainer {
+    width: 550px;
+    max-width: 85%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    overflow-x: clip;
+    overflow-y: auto;
+}
+.popupFormContainer::-webkit-scrollbar {
+    display: none;
+}
+.popupForm {
+    height: fit-content;
+    padding: 40px 25px;
+    background-color: #1F2662;
+    border: 10px solid #141840;
+    border-radius: 20px;
+}
+.popupForm h2 {
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.popupForm p {
+    font-size: 13px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.popupForm form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.popupForm form label {
+    font-size: 12px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.popupForm form input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #676767;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.popupForm form button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+}
+.popupForm form button span {
+    display: block;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+
+
+
+
+
+
 
 @media (max-width: 850px) {
     .overlay.active {

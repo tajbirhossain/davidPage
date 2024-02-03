@@ -11,3 +11,23 @@ overlay.addEventListener("click", () => {
     menu.classList.remove("active")
     overlay.classList.remove("active")
 })
+
+
+
+
+
+// popup functionality
+const popupFormWrap = document.querySelector(".popupFormWrap")
+const popupOverlay = document.querySelector(".popupOverlay")
+const pricingBuyBtn = document.querySelectorAll(".pricingMainCard button")
+
+
+pricingBuyBtn.forEach(item => {
+    item.addEventListener("click", () => {
+        popupFormWrap.classList.add("active")
+    })
+})
+
+popupOverlay.addEventListener("click", () => {
+    popupFormWrap.classList.remove("active")
+})
